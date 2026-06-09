@@ -19,6 +19,8 @@ import {
   Loader2
 } from 'lucide-react';
 
+import aboutImg from "../public/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg"
+
 // Inline SVG replacements for commented-out lucide icons
 const InstagramIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -37,7 +39,8 @@ const FacebookIcon = () => (
 // Premium Unsplash Images
 const IMAGES = {
   heroBg: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80",
-  aboutImg: "src/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg",
+  // aboutImg: "./../public/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg",
+  aboutImg: aboutImg,
   statsBg: "https://images.unsplash.com/photo-1507914464562-6ff4ac29692f?auto=format&fit=crop&w=1920&q=80",
   contactBg: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80",
   vegPlatter: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=600&q=80",
@@ -54,14 +57,14 @@ const IMAGES = {
   galleryAmbiance2: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80",
   galleryEvent1: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
   galleryEvent2: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
-  galleryPic1: "src/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
-  galleryPic2: "src/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
-  galleryPic3: "src/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg",
-  galleryPic4: "src/assets/04574aac-0b9b-4ae5-a80b-508939aebc3c.jpeg",
-  galleryPic5: "src/assets/16831af0-c394-4927-829a-0390c90f0167.jpeg",
-  galleryPic6: "src/assets/b931c4c6-b37f-44b2-8f0f-adfccb2545bd.jpeg",
-  galleryPic7: "src/assets/f0b95528-217a-44f8-a428-847ae85c49b7.jpeg",
-  galleryPic8: "src/assets/f49b4eba-fa63-4cbc-ba80-c93d85ecdf8b.jpeg",
+  galleryPic1: "assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
+  galleryPic2: "assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
+  galleryPic3: "assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg",
+  galleryPic4: "assets/04574aac-0b9b-4ae5-a80b-508939aebc3c.jpeg",
+  galleryPic5: "assets/16831af0-c394-4927-829a-0390c90f0167.jpeg",
+  galleryPic6: "assets/b931c4c6-b37f-44b2-8f0f-adfccb2545bd.jpeg",
+  galleryPic7: "assets/f0b95528-217a-44f8-a428-847ae85c49b7.jpeg",
+  galleryPic8: "assets/f49b4eba-fa63-4cbc-ba80-c93d85ecdf8b.jpeg",
 };
 
 const MENU_ITEMS = [
@@ -177,8 +180,8 @@ export default function App() {
   const [menuModalOpen, setMenuModalOpen] = useState(false);
     
   const menuPages = [
-    "/src/assets/806661ad-c266-425b-a730-0881a413eb50-0000.jpeg",
-    "/src/assets/806661ad-c266-425b-a730-0881a413eb50-0001.jpeg",
+    "assets/806661ad-c266-425b-a730-0881a413eb50-0000.jpeg",
+    "assets/806661ad-c266-425b-a730-0881a413eb50-0001.jpeg",
   ];
 
   const nextMenuPage = () =>
@@ -307,7 +310,7 @@ export default function App() {
                   </linearGradient>
                 </defs>
               </svg> */}
-              <img src="/src/assets/maa-village-logo-design.png"/>
+              <img src="assets/maa-village-logo-design.png"/>
 
             </div>
             <div>
