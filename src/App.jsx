@@ -54,7 +54,7 @@ const IMAGES = {
   galleryAmbiance2: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80",
   galleryEvent1: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
   galleryEvent2: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
-  galleryPic1: "/src/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
+  galleryPic1: "src/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
   galleryPic2: "src/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
   galleryPic3: "src/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg",
   galleryPic4: "src/assets/04574aac-0b9b-4ae5-a80b-508939aebc3c.jpeg",
