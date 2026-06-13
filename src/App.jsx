@@ -19,6 +19,20 @@ import {
   Loader2
 } from 'lucide-react';
 
+import aboutImg from "../public/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg"
+import galleryPic1 from "../public/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg"
+import galleryPic2 from  "../public/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg"
+import galleryPic3 from "../public/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg"
+import galleryPic4 from "../public/assets/04574aac-0b9b-4ae5-a80b-508939aebc3c.jpeg"
+import galleryPic5 from "../public/assets/16831af0-c394-4927-829a-0390c90f0167.jpeg"
+import galleryPic6 from "../public/assets/b931c4c6-b37f-44b2-8f0f-adfccb2545bd.jpeg"
+import galleryPic7 from "../public/assets/f0b95528-217a-44f8-a428-847ae85c49b7.jpeg"
+import galleryPic8 from "../public/assets/f49b4eba-fa63-4cbc-ba80-c93d85ecdf8b.jpeg"
+
+import menuPage1 from "../public/assets/806661ad-c266-425b-a730-0881a413eb50-0000.jpeg"
+import menuPage2 from "../public/assets/806661ad-c266-425b-a730-0881a413eb50-0001.jpeg"
+import maavillageLogo from "../public/assets/maa-village-logo-design.png"
+
 // Inline SVG replacements for commented-out lucide icons
 const InstagramIcon = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -37,7 +51,7 @@ const FacebookIcon = () => (
 // Premium Unsplash Images
 const IMAGES = {
   heroBg: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1920&q=80",
-  aboutImg: "src/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg",
+  // aboutImg: "./../public/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg",
   statsBg: "https://images.unsplash.com/photo-1507914464562-6ff4ac29692f?auto=format&fit=crop&w=1920&q=80",
   contactBg: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80",
   vegPlatter: "https://images.unsplash.com/photo-1601050690597-df056fb4ce78?auto=format&fit=crop&w=600&q=80",
@@ -54,14 +68,16 @@ const IMAGES = {
   galleryAmbiance2: "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80",
   galleryEvent1: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80",
   galleryEvent2: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=800&q=80",
-  galleryPic1: "src/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
-  galleryPic2: "src/assets/4a59a954-9613-454d-9bbe-4b057b7ca231.jpeg",
-  galleryPic3: "src/assets/374c37f4-0ffa-47cd-8d32-dbc3f480ada0.jpeg",
-  galleryPic4: "src/assets/04574aac-0b9b-4ae5-a80b-508939aebc3c.jpeg",
-  galleryPic5: "src/assets/16831af0-c394-4927-829a-0390c90f0167.jpeg",
-  galleryPic6: "src/assets/b931c4c6-b37f-44b2-8f0f-adfccb2545bd.jpeg",
-  galleryPic7: "src/assets/f0b95528-217a-44f8-a428-847ae85c49b7.jpeg",
-  galleryPic8: "src/assets/f49b4eba-fa63-4cbc-ba80-c93d85ecdf8b.jpeg",
+  aboutImg: aboutImg,
+  galleryPic1,
+  galleryPic2,
+  galleryPic3,
+  galleryPic4,
+  galleryPic5,
+  galleryPic6,
+  galleryPic7,
+  galleryPic8,
+  
 };
 
 const MENU_ITEMS = [
@@ -177,8 +193,7 @@ export default function App() {
   const [menuModalOpen, setMenuModalOpen] = useState(false);
     
   const menuPages = [
-    "/src/assets/806661ad-c266-425b-a730-0881a413eb50-0000.jpeg",
-    "/src/assets/806661ad-c266-425b-a730-0881a413eb50-0001.jpeg",
+    menuPage1, menuPage2,
   ];
 
   const nextMenuPage = () =>
@@ -307,7 +322,7 @@ export default function App() {
                   </linearGradient>
                 </defs>
               </svg> */}
-              <img src="/src/assets/maa-village-logo-design.png"/>
+              <img src={maavillageLogo}/>
 
             </div>
             <div>
@@ -738,7 +753,8 @@ export default function App() {
                     {
                       icon: <MapPin size={17} />,
                       label: "Our Location",
-                      content: <> Poddatur Gate Shankarpally, <br/> Hyderabad, Telangana 501203 </>
+                      content: <span className="hover:text-brand-gold transition-colors duration-300"> Poddatur Gate Shankarpally, <br/> Hyderabad, Telangana 501203 </span>,
+                      link: "https://www.google.com/maps/place/Shankarpalli+-+Hyderabad+Rd,+Telangana,+India/@17.4083814,78.2746341,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbef9feaf50cd3:0x9750603ac797e52e!8m2!3d17.4083814!4d78.2772144!16s%2Fg%2F11csrqwzy_?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
                     },
                     {
                       icon: <Phone size={17} />,
@@ -748,19 +764,30 @@ export default function App() {
                     {
                       icon: <Clock size={17} />,
                       label: "Hours",
-                      content: <>Monday – Sunday<br />11:00 AM – 10:30 PM</>
+                      content: <span className="hover:text-brand-gold transition-colors duration-300">Monday – Sunday<br />11:00 AM – 10:30 PM</span>
                     },
-                  ].map(({ icon, label, content }) => (
-                    <div key={label} className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold bg-dark-card/50 flex-shrink-0">
-                        {icon}
+                  ].map(({ icon, label, content, link }) => {
+                    let href = ""
+                    if(label.toLocaleLowerCase() === "our location") {
+                      href = "https://www.google.com/maps/place/Maa+Village+-+Taste+the+Best/@17.4222171,78.2108334,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbed93815ad4ad:0x81ac2509aa0be4a9!8m2!3d17.4222171!4d78.2108334!16s%2Fg%2F11ncb__ydc?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+                    } else if(label.toLocaleLowerCase() === "call us") {
+                      href = "tel:+9106309080706"
+                    }
+
+                    return ( 
+                    <a href={href}>
+                      <div key={label} className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold bg-dark-card/50 flex-shrink-0">
+                          {icon}
+                        </div>
+                        <div>
+                          <h4 className="font-serif text-white font-semibold text-lg mb-1 tracking-wider uppercase">{label}</h4>
+                          <p className="text-gray-400 text-lg font-sans leading-relaxed">{content}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-serif text-white font-semibold text-lg mb-1 tracking-wider uppercase">{label}</h4>
-                        <p className="text-gray-400 text-lg font-sans leading-relaxed">{content}</p>
-                      </div>
-                    </div>
-                  ))}
+                    </a>
+                    )
+                  })}
                 </div>
               </div>
 
@@ -800,10 +827,11 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full border border-brand-gold/40 flex items-center justify-center p-1.5 bg-dark-card">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
+              {/* <svg viewBox="0 0 100 100" className="w-full h-full">
                 <path d="M30 60 C30 80, 70 80, 70 60 Z" fill="#C5A880" />
                 <path d="M50 20 C60 35, 60 50, 50 55 C40 50, 40 35, 50 20 Z" fill="orange" />
-              </svg>
+              </svg> */}
+              <img src={maavillageLogo}/>
             </div>
             <div>
               <span className="block font-serif font-bold text-base tracking-widest text-brand-gold uppercase">Maa Village</span>
