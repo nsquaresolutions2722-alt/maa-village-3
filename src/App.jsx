@@ -753,7 +753,8 @@ export default function App() {
                     {
                       icon: <MapPin size={17} />,
                       label: "Our Location",
-                      content: <> Poddatur Gate Shankarpally, <br/> Hyderabad, Telangana 501203 </>
+                      content: <span className="hover:text-brand-gold transition-colors duration-300"> Poddatur Gate Shankarpally, <br/> Hyderabad, Telangana 501203 </span>,
+                      link: "https://www.google.com/maps/place/Shankarpalli+-+Hyderabad+Rd,+Telangana,+India/@17.4083814,78.2746341,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbef9feaf50cd3:0x9750603ac797e52e!8m2!3d17.4083814!4d78.2772144!16s%2Fg%2F11csrqwzy_?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
                     },
                     {
                       icon: <Phone size={17} />,
@@ -763,19 +764,30 @@ export default function App() {
                     {
                       icon: <Clock size={17} />,
                       label: "Hours",
-                      content: <>Monday – Sunday<br />11:00 AM – 10:30 PM</>
+                      content: <span className="hover:text-brand-gold transition-colors duration-300">Monday – Sunday<br />11:00 AM – 10:30 PM</span>
                     },
-                  ].map(({ icon, label, content }) => (
-                    <div key={label} className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold bg-dark-card/50 flex-shrink-0">
-                        {icon}
+                  ].map(({ icon, label, content, link }) => {
+                    let href = ""
+                    if(label.toLocaleLowerCase() === "our location") {
+                      href = "https://www.google.com/maps/place/Maa+Village+-+Taste+the+Best/@17.4222171,78.2108334,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcbed93815ad4ad:0x81ac2509aa0be4a9!8m2!3d17.4222171!4d78.2108334!16s%2Fg%2F11ncb__ydc?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
+                    } else if(label.toLocaleLowerCase() === "call us") {
+                      href = "tel:+9106309080706"
+                    }
+
+                    return ( 
+                    <a href={href}>
+                      <div key={label} className="flex items-start gap-4">
+                        <div className="w-10 h-10 rounded-full border border-brand-gold/30 flex items-center justify-center text-brand-gold bg-dark-card/50 flex-shrink-0">
+                          {icon}
+                        </div>
+                        <div>
+                          <h4 className="font-serif text-white font-semibold text-lg mb-1 tracking-wider uppercase">{label}</h4>
+                          <p className="text-gray-400 text-lg font-sans leading-relaxed">{content}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-serif text-white font-semibold text-lg mb-1 tracking-wider uppercase">{label}</h4>
-                        <p className="text-gray-400 text-lg font-sans leading-relaxed">{content}</p>
-                      </div>
-                    </div>
-                  ))}
+                    </a>
+                    )
+                  })}
                 </div>
               </div>
 
